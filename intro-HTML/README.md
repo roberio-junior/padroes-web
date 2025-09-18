@@ -113,7 +113,7 @@ Exemplo prático:
 ```
 
 ```html
-<p>Esse é um parágrafo em outro bloco
+<p>Esse é um parágrafo em outro bloco.<p>
 ```
 
 ---
