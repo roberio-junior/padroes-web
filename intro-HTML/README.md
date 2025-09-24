@@ -91,6 +91,7 @@ Exemplo:
 <br>
 <hr>
 ```
+
 ---
 
 ### 🔹 Categorias de Elementos HTML
@@ -121,11 +122,11 @@ Exemplo prático:
 
 ### 🔹 Atributos
 
-* Elementos podem ter **atributos** que fornecem informações adicionais, como `class`, `id`, `href`, `title` etc. ([MDN Web Docs][1])
-* Atributos têm nome, sinal de igual, valor entre aspas. ([MDN Web Docs][1])
-* **Atributos booleanos**: alguns atributos funcionam como “liga/desliga” — ex: `disabled`. Quando presentes, já ativam o efeito desejado. ([MDN Web Docs][1])
-* Aspas simples ou duplas para os valores são permitidas; o importante é não misturar de modo errado. ([MDN Web Docs][1])
-* Sempre usar aspas ajuda a evitar ambiguidades. ([MDN Web Docs][1])
+ * Elementos podem ter **atributos** que fornecem informações adicionais, como `class`, `id`, `href`, `title` etc.
+* Atributos têm nome, sinal de igual, valor entre aspas.
+* **Atributos booleanos**: alguns atributos funcionam como “liga/desliga” — ex: `disabled`. Quando presentes, já ativam o efeito desejado.
+* Aspas simples ou duplas para os valores são permitidas; o importante é não misturar de modo errado.
+* Sempre usar aspas ajuda a evitar ambiguidades.
 
 ---
 
@@ -133,17 +134,29 @@ Exemplo prático:
 
 Uma página HTML típica inclui:
 
-* `<!DOCTYPE html>` — declaração que indica o tipo do documento. ([MDN Web Docs][1])
-* `<html>` — elemento raiz que envolve todo o conteúdo HTML. ([MDN Web Docs][1])
-* `<head>` — contém metadados (“metainformações”) que não aparecem diretamente na página, como título, codificação de caracteres etc. ([MDN Web Docs][1])
-* `<meta charset="utf-8">` — define qual codificação de caracteres o documento usa; UTF-8 cobre a maioria dos caracteres de línguas humanas. ([MDN Web Docs][1])
-* `<title>` — define o título que aparece na aba do navegador. ([MDN Web Docs][1])
-* `<body>` — contém todo conteúdo visível ao usuário (texto, imagens, vídeos, links etc.). ([MDN Web Docs][1])
+* `<!DOCTYPE html>` — declaração que indica o tipo do documento.
+* `<html>` — elemento raiz que envolve todo o conteúdo HTML.
+* `<head>` — contém metadados (“metainformações”) que não aparecem diretamente na página, como título, codificação de caracteres etc.
+* `<meta charset="utf-8">` — define qual codificação de caracteres o documento usa; UTF-8 cobre a maioria dos caracteres de línguas humanas.
+* `<title>` — define o título que aparece na aba do navegador.
+* `<body>` — contém todo conteúdo visível ao usuário (texto, imagens, vídeos, links etc.).
 
 ---
 
-## Outros conceitos importantes
+### 🔹 Caracteres especiais no HTML
+* Em HTML, certos caracteres como `<`, `>`, `"`, `'` e `&` são reservados pela própria linguagem. Para usá-los no texto sem que sejam interpretados como código, é preciso recorrer a **referências de caracteres**, que começam com `&` e terminam com `;`.
 
-* **Referências de entidades HTML**: quando você quer colocar caracteres especiais como `<`, `>`, `&`, aspas dentro de texto, você usa entidades como `&lt;`, `&gt;`, `&amp;` etc. Para evitar que esses caracteres sejam interpretados como parte da marcação. ([MDN Web Docs][1])
-* **Comentários**: são seções de código invisíveis para o usuário/navegador, usadas para documentação, explicações etc. Sintaxe: `<!-- comentário -->`. ([MDN Web Docs][1])
-* **Espaços em branco e quebras de linha no HTML**: excesso de espaços, múltiplas quebras de linha não mudam muito a renderização — o navegador “colapsa” espaços extras em um só. Servem mais para legibilidade do código. ([MDN Web Docs][1])
+Exemplos:
+
+* `<` → `&lt;`
+* `>` → `&gt;`
+* `"` → `&quot;`
+* `'` → `&apos;`
+* `&` → `&amp;`
+
+---
+
+### 🔹 Outros conceitos
+
+* **Comentários**: são seções de código invisíveis para o usuário/navegador, usadas para documentação, explicações etc. Sintaxe: `<!-- comentário -->`.
+* **Espaços em branco e quebras de linha no HTML**: excesso de espaços, múltiplas quebras de linha não mudam muito a renderização — o navegador “colapsa” espaços extras em um só. Servem mais para legibilidade do código.
