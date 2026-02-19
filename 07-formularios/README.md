@@ -1,4 +1,4 @@
-# 📌 Estrutura de um Formulário HTML
+# Estrutura de um Formulário HTML
 
 Um formulário HTML é composto por um elemento `<form>` que contém controles interativos responsáveis pela coleta e envio de dados ao servidor.
 
@@ -125,6 +125,54 @@ Permite selecionar apenas uma opção dentro de um grupo.
 
 ---
 
+## `<select>`
+
+O elemento HTML `<select>` representa um controle de formulário que permite ao usuário escolher uma opção entre várias opções disponíveis. As opções são definidas com `<option>` e podem ser agrupadas com `<optgroup>` para melhor organização. ([MDN Web Docs][1])
+
+```html
+<select name="opcoes">
+  <option value="valor1">Valor 1</option>
+  <option value="valor2">Valor 2</option>
+  <option value="valor3">Valor 3</option>
+</select>
+```
+
+### Atributos Principais
+
+| Atributo    | Descrição                                                               |
+| ----------- | ----------------------------------------------------------------------- |
+| `name`      | Nome do controle para envio ao servidor                                 |
+| `multiple`  | Permite selecionar várias opções ao mesmo tempo                         |
+| `required`  | Torna obrigatório escolher uma opção                                    |
+| `size`      | Define o número visível de linhas quando em modo lista (com `multiple`) |
+| `disabled`  | Desativa o controle                                                     |
+| `autofocus` | Dá foco ao elemento ao carregar a página                                |
+
+---
+
+## `<textarea>`
+
+O elemento `<textarea>` representa uma área de texto de **múltiplas linhas**, ideal para permitir entradas de texto mais longas — por exemplo, comentários, descrições ou mensagens.
+
+```html
+<label for="mensagem">Mensagem</label>
+<textarea id="mensagem" name="mensagem" rows="5" cols="30"></textarea>
+```
+
+### Principais Atributos
+
+| Atributo      | Descrição                             |
+| ------------- | --------------------------------------|
+| `name`        | Nome do controle para envio           |
+| `rows`        | Número de linhas visíveis             |
+| `cols`        | Largura em número de caracteres       |
+| `placeholder` | Texto de exemplo exibido quando vazio |
+| `maxlength`   | Máximo de caracteres permitidos       |
+| `minlength`   | Mínimo de caracteres exigidos         |
+| `required`    | Torna obrigatório                     |
+
+---
+
 ## Estrutura Interna Recomendada
 
 Para organização:
@@ -185,6 +233,31 @@ Para organização:
         placeholder="(84) 99999-9999">
     </div>
 
+    <div class="form-group">
+      <label for="estado">Estado</label><br>
+      <select id="estado" name="estado" required>
+        <option value="">Selecione um estado</option>
+        <option value="rn">Rio Grande do Norte</option>
+        <option value="pb">Paraíba</option>
+        <option value="ce">Ceará</option>
+        <option value="pe">Pernambuco</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="curso">Curso de Interesse</label><br>
+      <select id="curso" name="curso">
+        <optgroup label="Tecnologia">
+          <option value="tsi">Sistemas para Internet</option>
+          <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+        </optgroup>
+        <optgroup label="Engenharias">
+          <option value="eng_minas">Engenharia de Minas</option>
+          <option value="eng_amb">Engenharia Ambiental</option>
+        </optgroup>
+      </select>
+    </div>
+
   </fieldset>
 
   <fieldset>
@@ -216,6 +289,21 @@ Para organização:
         name="genero" 
         value="outro">
       <label for="outro">Outro</label>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Mensagem</legend>
+
+    <div class="form-group">
+      <label for="mensagem">Observações</label><br>
+      <textarea 
+        id="mensagem" 
+        name="mensagem" 
+        rows="5" 
+        cols="30"
+        placeholder="Digite aqui sua mensagem ou observações"></textarea>
     </div>
 
   </fieldset>
