@@ -1,138 +1,137 @@
-# Estrutura Completa de um Formulário Web
+# 📌 Estrutura de um Formulário HTML
 
-Um formulário bem estruturado envolve:
-
-* `<form>`
-* `<label>`
-* `<input>`
-* `<fieldset>`
-* `<legend>`
-* Elementos estruturais como `<div>`, `<p>` ou listas
-* Atributos importantes (`for`, `id`, `name`, `required`, etc.)
+Um formulário HTML é composto por um elemento `<form>` que contém controles interativos responsáveis pela coleta e envio de dados ao servidor.
 
 ---
 
-# O elemento `<form>`
+## `<form>`
 
-É o **container principal** do formulário.
+Elemento raiz responsável por encapsular os campos e definir como os dados serão enviados.
 
-### Principais atributos:
+### Atributos principais
 
-| Atributo       | Função                                  |
+| Atributo       | Descrição                               |
 | -------------- | --------------------------------------- |
-| `action`       | URL para onde os dados serão enviados   |
-| `method`       | Método HTTP (`GET` ou `POST`)           |
-| `autocomplete` | Ativa/desativa preenchimento automático |
+| `action`       | URL de destino dos dados                |
+| `method`       | Método HTTP utilizado (`GET` ou `POST`) |
+| `autocomplete` | Controla preenchimento automático       |
 
-### Exemplo:
+### Exemplo
 
 ```html
 <form action="/cadastro" method="post">
 ```
 
-Sem `<form>`, os campos existem visualmente, mas **não enviam dados**.
+> Campos fora do `<form>` não participam do envio.
 
 ---
 
-## 🔎 Diferença entre GET e POST
+### GET vs POST
 
-| Método | Característica                        |
+| Método | Comportamento                         |
 | ------ | ------------------------------------- |
-| GET    | Envia os dados pela URL               |
-| POST   | Envia os dados no corpo da requisição |
+| GET    | Dados enviados na URL                 |
+| POST   | Dados enviados no corpo da requisição |
 
-* Use **GET** para buscas.
-* Use **POST** para envio de dados sensíveis ou formulários maiores.
-
----
-
-# 🔹 O atributo `name`
-
-O atributo `name` define a **chave que será enviada ao servidor**.
-
-```html
-<input type="text" name="usuario">
-```
-
-Se o usuário digitar:
-
-```
-Robério
-```
-
-O envio será algo como:
-
-```
-usuario=Robério
-```
+* **GET** → consultas e buscas
+* **POST** → envio de dados sensíveis ou extensos
 
 ---
 
-# O elemento `<label>` (MUITO importante)
+## `<label>`
 
-O `<label>` associa um texto descritivo a um campo.
-
-### Forma correta:
+Define uma descrição textual para um campo de formulário.
 
 ```html
-<label for="email">E-mail:</label>
+<label for="email">E-mail</label>
 <input type="email" id="email" name="email">
 ```
 
-O `for` do `<label>` deve ser igual ao `id` do `<input>`.
-
-Se você clicar no texto “E-mail”, o campo será ativado.
-
----
-
-# `<fieldset>` — Agrupamento Semântico
-
-Ele agrupa campos relacionados.
-
-Muito útil quando:
-
-* Você tem grupos de rádio (`radio`)
-* Grupos de checkbox
-* Seções como "Dados Pessoais", "Endereço", etc.
+* O valor de `for` deve corresponder ao `id` do campo.
+* Melhora acessibilidade e usabilidade.
 
 ---
 
-# `<legend>` — Título do Grupo
+## Agrupamento Semântico
 
-O `<legend>`:
+### `<fieldset>`
 
-* Deve ser o **primeiro elemento dentro do `<fieldset>`**
-* Descreve o conjunto de campos
+Agrupa campos relacionados semanticamente.
 
-Exemplo completo:
+### `<legend>`
+
+Define o título do grupo e deve ser o primeiro elemento dentro do `<fieldset>`.
 
 ```html
 <fieldset>
-  <legend>Informações Pessoais</legend>
-
-  <p>
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome">
-  </p>
-
-  <p>
-    <label for="idade">Idade:</label>
-    <input type="number" id="idade" name="idade">
-  </p>
+  <legend>Dados Pessoais</legend>
 </fieldset>
 ```
 
 ---
 
-# Estruturação Interna do Formulário
+## `<input>`
 
-A MDN recomenda organizar os campos usando:
+Elemento utilizado para criar controles interativos.
+
+O comportamento depende do atributo `type`.
+
+---
+
+### Atributos essenciais
+
+| Atributo      | Função                          |
+| ------------- | ------------------------------- |
+| `name`        | Chave enviada ao servidor       |
+| `value`       | Valor enviado ou inicial        |
+| `required`    | Campo obrigatório               |
+| `checked`     | Seleção padrão (radio/checkbox) |
+| `disabled`    | Desativa o campo                |
+| `readonly`    | Somente leitura                 |
+| `placeholder` | Texto de exemplo                |
+| `pattern`     | Validação por expressão regular |
+
+---
+
+## Principais tipos de `<input>`
+
+### `type="checkbox"`
+
+Permite múltiplas seleções independentes.
+
+* Se marcado → envia `name=value`
+* Se não marcado → não envia valor
+
+```html
+<input type="checkbox" id="newsletter" name="newsletter" value="yes">
+<label for="newsletter">Receber newsletter</label>
+```
+
+---
+
+### `type="radio"`
+
+Permite selecionar apenas uma opção dentro de um grupo.
+
+* Radios do mesmo grupo devem compartilhar o mesmo `name`.
+
+```html
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Masculino</label>
+
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Feminino</label>
+```
+
+---
+
+## Estrutura Interna Recomendada
+
+Para organização:
 
 * `<p>` para cada campo
-* `<div>` para agrupamento
-* Listas `<ul>` e `<li>` quando fizer sentido
-
-Exemplo estruturado:
+* `<div>` para agrupamentos
+* Listas quando necessário
 
 ```html
 <form>
@@ -140,13 +139,8 @@ Exemplo estruturado:
     <legend>Contato</legend>
 
     <p>
-      <label for="email">E-mail:</label>
+      <label for="email">E-mail</label>
       <input type="email" id="email" name="email" required>
-    </p>
-
-    <p>
-      <label for="telefone">Telefone:</label>
-      <input type="tel" id="telefone" name="telefone">
     </p>
   </fieldset>
 </form>
@@ -154,49 +148,94 @@ Exemplo estruturado:
 
 ---
 
-# Atributos importantes em formulários
-
-| Atributo      | O que faz                        |
-| ------------- | -------------------------------- |
-| `required`    | Torna o campo obrigatório        |
-| `placeholder` | Texto de exemplo dentro do campo |
-| `readonly`    | Campo apenas leitura             |
-| `disabled`    | Campo desativado                 |
-| `pattern`     | Validação via regex              |
-| `min` / `max` | Limites para números             |
-
----
-
-# Exemplo Completo Profissional
+# Exemplo Completo
 
 ```html
 <form action="/enviar" method="post">
-  
+
   <fieldset>
     <legend>Dados Pessoais</legend>
 
-    <p>
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
-    </p>
+    <div class="form-group">
+      <label for="nome">Nome</label><br>
+      <input 
+        type="text" 
+        id="nome" 
+        name="nome" 
+        placeholder="Digite seu nome completo"
+        required>
+    </div>
 
-    <p>
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
-    </p>
+    <div class="form-group">
+      <label for="email">E-mail</label><br>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="exemplo@email.com"
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="telefone">Telefone</label><br>
+      <input 
+        type="tel" 
+        id="telefone" 
+        name="telefone" 
+        placeholder="(84) 99999-9999">
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Gênero</legend>
+
+    <div class="form-group">
+      <input 
+        type="radio" 
+        id="masculino" 
+        name="genero" 
+        value="masculino" 
+        required>
+      <label for="masculino">Masculino</label>
+    </div>
+
+    <div class="form-group">
+      <input 
+        type="radio" 
+        id="feminino" 
+        name="genero" 
+        value="feminino">
+      <label for="feminino">Feminino</label>
+    </div>
+
+    <div class="form-group">
+      <input 
+        type="radio" 
+        id="outro" 
+        name="genero" 
+        value="outro">
+      <label for="outro">Outro</label>
+    </div>
 
   </fieldset>
 
   <fieldset>
     <legend>Preferências</legend>
 
-    <p>
-      <input type="checkbox" id="newsletter" name="newsletter">
-      <label for="newsletter">Receber newsletter</label>
-    </p>
+    <div class="form-group">
+      <input 
+        type="checkbox" 
+        id="aceitar_termos" 
+        name="aceitar_termos" 
+        value="sim"
+        required>
+      <label for="aceitar_termos">Aceito os termos de uso</label>
+    </div>
 
   </fieldset>
 
   <button type="submit">Enviar</button>
+
 </form>
 ```
