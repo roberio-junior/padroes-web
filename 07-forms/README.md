@@ -127,7 +127,7 @@ Permite selecionar apenas uma opção dentro de um grupo.
 
 ## `<select>`
 
-O elemento HTML `<select>` representa um controle de formulário que permite ao usuário escolher uma opção entre várias opções disponíveis. As opções são definidas com `<option>` e podem ser agrupadas com `<optgroup>` para melhor organização. ([MDN Web Docs][1])
+O elemento HTML `<select>` representa um controle de formulário que permite ao usuário escolher uma opção entre várias opções disponíveis. As opções são definidas com `<option>` e podem ser agrupadas com `<optgroup>` para melhor organização.
 
 ```html
 <select name="opcoes">

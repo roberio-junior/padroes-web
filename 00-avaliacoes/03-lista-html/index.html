@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios de HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Blog Robério Júnior</h1>
+    </header>
+
+    <nav>
+        <ol>
+            <li><a href="#noticias">Notícias</a></li>
+            <li><a href="#imagens">Imagens</a></li>
+            <li><a href="#listas">Listas</a></li>
+            <li><a href="#tabela">Tabela</a></li>
+            <li><a href="#formulario">Formulário</a></li>
+        </ol>
+    </nav>
+
+    <main>
+        <aside>
+            <h2>SideBar</h2>
+        </aside>
+
+        <section id="noticias">
+            <h2>Notícias</h2>
+            <article>
+                <h3>Notícia 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus officiis laboriosam dolorem quibusdam fugit, quisquam placeat magnam, dolorum quae corporis quaerat odit modi a eos doloribus. Impedit incidunt quo eos.
+                </p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, temporibus, iusto autem iure minima a qui accusamus porro dolores molestias omnis nostrum. Amet nobis cumque fuga et quo. Quidem, incidunt! <br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem minus, repellat a vel, itaque excepturi ad tenetur amet obcaecati asperiores architecto provident at dignissimos aperiam cupiditate veniam nostrum, hic commodi.</p>
+                <figure>
+                    <img src="assets/foto-p.png" alt="Foto 300x300">
+                    <figcaption>Foto com proporção 300x300</figcaption>
+                </figure>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut perspiciatis cumque iure cum beatae dolorem ab obcaecati, veritatis aliquid! Quam, sed ab sunt odio commodi officia eum beatae facere perspiciatis.</p>
+                <blockquote>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam enim exercitationem tempora illum esse id eaque natus vitae deleniti. Quam, ea aut minus ut aperiam quod pariatur perferendis excepturi ipsa."</blockquote>
+            </article>
+        </section>
+
+        <section id="imagens">
+            <h2>Imagens</h2>
+            <figure>
+                <img src="assets/foto-p.png" alt="imagem 1">
+                <img src="assets/foto-p.png" alt="imagem 2">
+                <img src="assets/foto-p.png" alt="imagem 2">
+            </figure>
+        </section>
+
+        <section id="listas">
+            <h2>Listas</h2>
+            <ol>
+                <li>Primeiro item</li>
+                <li>Segundo item</li>
+                <li>Terceiro item</li>
+            </ol>
+            <ul>
+                <li>Item A</li>
+                <li>Item B</li>
+                <li>Item C</li>
+            </ul>
+        </section>
+
+        <section id="tabela">
+            <h2>Tabela</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>idade</th>
+                        <th>cidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Robério</td>
+                        <td>22</td>
+                        <td>Acari</td>
+                    </tr>
+                    <tr>
+                        <td>Lázaro</td>
+                        <td>22</td>
+                        <td>Santa Cruz</td>
+                    </tr>
+                    <tr>
+                        <td>Daniel</td>
+                        <td>32.</td>
+                        <td>Cruzeta</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total de Registros: 3</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="formulario">
+            <h2>Formulário</h2>
+            <form action="/submit" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario">
+
+                <label for="genero">Gênero</label>
+                <select name="genero" id="genero">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="faixa-etaria">Faixa Etária:</label>
+                <input type="radio" id="10-18" name="faixa-etaria" value="10-18">
+                <label for="10-18">10-18 anos</label>
+                <input type="radio" id="19-35" name="faixa-etaria" value="19-35">
+                <label for="19-35">19-35 anos</label>
+                <input type="radio" id="36-60" name="faixa-etaria" value="36-60">
+                <label for="36-60">36-60 anos</label>
+                <input type="radio" id="60+" name="faixa-etaria" value="60+">
+                <label for="60+">60+ anos</label>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha">
+
+                <textarea name="comentarios" id="comentarios" placeholder="Digite seus comentários aqui..." cols="30" rows="3"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 - Meu Blog</p>
+    </footer>
+</body>
+</html>
