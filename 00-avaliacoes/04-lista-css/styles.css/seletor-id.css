@@ -1,0 +1,20 @@
+#cabecalho {
+    text-align: center;
+}
+
+#rodape {
+    background-color: black;
+    color: white;
+}
+
+#menu {
+    padding: 10px;
+}
+
+#principal {
+    margin: 20px;
+}
+
+#banner {
+    height: 200px;
+}

@@ -1,0 +1,19 @@
+h1, h2, h3 {
+    margin: 20px;
+}
+
+p, div {
+    padding: 10px;
+}
+
+header, footer {
+    background-color: gray;
+}
+
+a, button {
+    color: purple;
+}
+
+table, td {
+    border: 1px solid;
+}

@@ -1,0 +1,19 @@
+.destaque {
+    color: red;
+}
+
+.fundo-azul {
+    background-color: rgb(88, 88, 255);
+}
+
+.texto-grande {
+    font-size: 24px;
+}
+
+.borda-verde {
+    border: solid 2px green;
+}
+
+.alinhado-centro {
+    text-align: center;
+}

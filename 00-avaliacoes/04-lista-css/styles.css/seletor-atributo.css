@@ -1,0 +1,19 @@
+a[target="_blank"] {
+    color: green;
+}
+
+input[type="text"] {
+    border: 1px solid;
+}
+
+img[alt] {
+    border: 5px solid red;
+}
+
+button[disabled] {
+    background-color: gray;
+}
+
+input[type="password"] {
+    color: blue;
+}
