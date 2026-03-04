@@ -1,0 +1,155 @@
+# Lista de Exercícios de CSS: Flexbox e Media Queries
+
+## Exercício 1 – Cabeçalho Responsivo
+
+Crie um cabeçalho (Versão para dispositivos maiores que 768px) com:
+
+- Nome do site à esquerda  
+- Menu de navegação com três links à direita (Home, Sobre e Contato) 
+
+### Layout
+
+**Mobile (< 768px):**
+- O cabeçalho deve ser exibido em coluna.
+- O nome do site fica acima do menu de navegação.
+
+**Dispositivos maiores (≥ 768px):**
+- O nome do site e o menu devem ser exibidos em linha.
+
+### Dica
+
+Pesquise sobre a propriedade:
+
+- `justify-content`
+  - `space-between`
+  - `flex-end`
+
+---
+
+## Exercício 2 – Seção com Imagem e Texto
+
+Crie uma seção contendo:
+
+- Uma imagem à esquerda
+- Um texto à direita
+
+### Layout
+
+**Mobile (< 768px):**
+- A imagem fica acima do texto.
+- Ambos em uma única coluna.
+
+**Dispositivos maiores (≥ 768px):**
+- Imagem e texto exibidos lado a lado.
+
+### Dicas
+
+- Utilize a imagem: https://via.placeholder.com/500x300
+
+- Torne a imagem responsiva:
+  - `height: auto;`
+  - Ajuste o `width` conforme o tamanho da tela.
+
+---
+
+## Exercício 3 – Cards de Serviços
+
+Crie uma seção com **três cards de serviços**.
+
+### Layout
+
+**Mobile (< 768px):**
+- Cards exibidos em uma única coluna.
+
+**Dispositivos maiores (≥ 768px):**
+- Cards exibidos lado a lado em três colunas.
+
+### Dicas
+
+- Não utilize `width: 33%`
+- Utilize um valor menor (ex: `30%`)
+- Pesquise sobre:
+  - `justify-content: space-around`
+
+---
+
+## Exercício 4 – Galeria de Imagens
+
+Crie uma galeria com **quatro imagens**.
+
+### Layout
+
+**Mobile (< 768px):**
+- Imagens exibidas em uma única coluna.
+
+**Dispositivos maiores (≥ 768px):**
+- Imagens exibidas em duas colunas.
+
+### Dicas
+
+- Utilize a imagem: https://via.placeholder.com/400
+
+---
+
+## Exercício 5 – Seção com Dois Artigos
+
+Crie uma seção contendo **dois artigos**.
+
+### Layout
+
+**Mobile (< 768px):**
+- Artigos exibidos em uma única coluna.
+
+**Dispositivos maiores (≥ 768px):**
+- Artigos exibidos lado a lado.
+
+### Dica
+
+Pesquise sobre:
+
+- `justify-content: space-between`
+
+---
+
+## Exercício 6 – Formulário de Contato
+
+Crie um formulário contendo:
+
+- Campo de texto para **Nome**
+- Campo de texto para **Email**
+- Área de texto para **Mensagem**
+- Botão de envio
+
+### Layout
+
+**Mobile (< 768px):**
+- Campos exibidos em uma única coluna.
+
+**Dispositivos maiores (≥ 768px):**
+- Formulário centralizado na página.
+- Campos ocupando 50% da largura da tela.
+
+### Dica
+
+Pesquise sobre:
+
+- `justify-content: center`
+
+---
+
+## Exercício 7 – Rodapé com Redes Sociais
+
+Crie um rodapé contendo três links:
+
+- Facebook
+- BlueSky
+- LinkedIn
+
+### Layout
+
+**Mobile (< 768px):**
+- Links exibidos em uma única coluna.
+
+**Dispositivos maiores (≥ 768px):**
+- Links exibidos em uma única linha.
+- Centralizados no rodapé.

@@ -1,0 +1,184 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(74, 163, 74);
+    color: white;
+    padding: 25px;
+}
+
+.menu {
+    background-color: rgb(48, 48, 48);
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu li {
+    padding: 15px;
+}
+
+.exercicio2 {
+    display: flex;
+}
+
+.exercicio2 img {
+    height: auto;
+    width: 50%;
+}
+
+.exercicio2 article {
+    padding: 20px;
+    width: 50%;
+    background-color: yellow;
+}
+
+.exercicio2 p {
+    padding-top: 20px;
+}
+
+.exercicio3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.exercicio3 article {
+    background-color: rgb(62, 184, 255);
+    color: white;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+}
+
+.exercicio3 p {
+    padding-top: 10px;
+}
+
+.exercicio4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.exercicio4 img {
+    margin: 10px;
+}
+
+.exercicio5 {
+    display: flex;
+    justify-content: center;
+}
+
+.exercicio5 article {
+    background-color: rgb(255, 187, 0);
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+.exercicio5 p {
+    padding-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea, button {
+    width: 50%;
+    padding: 10px;
+    margin: 0 0 10px 0;
+}
+
+button{
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+footer {
+    background-color: rgb(48, 48, 48);
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px;
+}
+
+footer li {
+    padding: 0px 20px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu {
+        width: 100%;
+    }
+
+    .exercicio2 {
+        flex-direction: column;
+    }
+
+    .exercicio2 img {
+        width: 100%;
+    }
+
+    .exercicio2 article {
+        width: 100%;
+    }
+    
+    .exercicio3 {
+        flex-direction: column;
+        width: 96%;
+    }
+
+    .exercicio4 img {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .exercicio5 {
+        flex-direction: column;
+    }
+
+    .exercicio5 article {
+        width: 96%;
+    }
+
+    input, textarea, button {
+        width: 90%;
+    }
+    
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    footer li {
+        padding: 10px 0;
+    }
+}
